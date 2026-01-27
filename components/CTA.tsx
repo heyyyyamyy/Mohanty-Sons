@@ -21,8 +21,7 @@ const CTA: React.FC = () => {
             <div className="flex gap-4 mt-12">
                {[
                  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=200&h=150&auto=format&fit=crop",
-                 "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=200&h=150&auto=format&fit=crop",
-                 "https://images.unsplash.com/photo-1617116467384-5f80b987515d?q=80&w=200&h=150&auto=format&fit=crop"
+                 "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=200&h=150&auto=format&fit=crop"
                ].map((src, i) => (
                  <div key={i} className={`w-32 h-24 border-2 border-white/20 rounded-sm overflow-hidden animate-on-scroll zoom-in delay-${(i + 1) * 200}`}>
                    <img src={src} alt="Gallery" className="w-full h-full object-cover" />

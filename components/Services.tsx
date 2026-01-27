@@ -7,7 +7,7 @@ const Services: React.FC = () => {
       id: 1,
       title: "Structural Steel Fabrication",
       icon: <Factory size={24} />,
-      image: "https://images.unsplash.com/photo-1535976868661-86927958f2da?q=80&w=2070&auto=format&fit=crop"
+      image: "https://img.freepik.com/premium-photo/steel-framework-new-commercial-building_455891-1.jpg?semt=ais_hybrid&w=740&q=80"
     },
     {
       id: 2,

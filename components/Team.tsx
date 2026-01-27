@@ -1,10 +1,12 @@
 import React from 'react';
 import { Facebook, Linkedin, Twitter } from 'lucide-react';
+import AkshayaImage from '../AKSHAYA KUMAR MOHANTY.png';
+import AjayImage from '../AJAY KUMAR MOHANTY.png';
 
 const Team: React.FC = () => {
   const team = [
-    { name: "Akshaya Kumar Mohanty", role: "Director", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop" },
-    { name: "Ajay Kumar Mohanty", role: "Director", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop" },
+    { name: "Akshaya Kumar Mohanty", role: "Director", img: AkshayaImage },
+    { name: "Ajay Kumar Mohanty", role: "Director", img: AjayImage },
   ];
 
   return (
@@ -26,7 +28,7 @@ const Team: React.FC = () => {
                 <img 
                   src={member.img} 
                   alt={member.name} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 
                 {/* Social Overlay */}

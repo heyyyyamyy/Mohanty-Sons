@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
 
   const slides = [
     {
-      image: "https://img.freepik.com/free-photo/beautiful-view-construction-site-city-sunset_181624-9347.jpg?semt=ais_hybrid&w=740&q=80",
+      image: "/teamgroup.png",
       subtitle: "Welcome to Mohanty & Sons",
       quote: "Forging the future with precision steel engineering."
     },
