@@ -31,18 +31,23 @@ const AnimationObserver = () => {
         }
       });
     }, {
-      threshold: 0.1, // Trigger when 10% of element is visible
-      rootMargin: "0px 0px -50px 0px" // Offset slightly so it triggers before bottom
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
     });
 
-    // Small timeout to allow DOM to render after route change
-    setTimeout(() => {
+    // Re-scan DOM for animate-on-scroll elements
+    const scanAndObserve = () => {
       const elements = document.querySelectorAll('.animate-on-scroll');
       elements.forEach((el) => observer.observe(el));
-    }, 100);
+    };
+
+    // Initial scan
+    setTimeout(scanAndObserve, 100);
+    // Secondary scan for delayed elements
+    setTimeout(scanAndObserve, 500);
 
     return () => observer.disconnect();
-  }, [location.pathname]); // Re-run on route change
+  }, [location.pathname]);
 
   return null;
 };
