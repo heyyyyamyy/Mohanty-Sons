@@ -17,61 +17,61 @@ const Services: React.FC = () => {
       icon: <Hammer size={32} />,
       title: "Heavy, Medium & Light Fabrication",
       desc: "Precision fabrication of heavy columns, beams, and trusses, as well as medium and light engineering components tailored to project specifications.",
-      image: "https://images.unsplash.com/photo-1535976868661-86927958f2da?q=80&w=2070&auto=format&fit=crop"
+      image: "/fabheavysteel.jpg"
     },
     {
       icon: <ArrowUpCircle size={32} />,
       title: "Industrial Erection Works",
       desc: "Safe and efficient erection of plant machinery, structural steel, and technological structures using heavy-lift cranes and expert rigging teams.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+      image: "/structure-fabrication-erection-work.jpg"
     },
     {
       icon: <Flame size={32} />,
       title: "Kiln & Cooler Installation",
       desc: "Specialized installation and alignment of Rotary Kilns, Coolers, and support rollers for Cement, Sponge Iron, and Alumina plants.",
-      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop"
+      image: "/Rotary-Kiln-Shell-Fabrication.jpg"
     },
     {
       icon: <Settings size={32} />,
       title: "Conveyor System Installation",
       desc: "Complete erection of material handling systems including Belt Conveyors, Pipe Conveyors, and Bucket Elevators for raw material transport.",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
+      image: "/conveyor.jpg"
     },
     {
       icon: <Zap size={32} />,
       title: "Boiler Works",
       desc: "Erection of high-pressure boilers, steam drums, and associated pressure parts for Power Plants and captive power units.",
-      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop"
+      image: "/boiler.jpg"
     },
     {
       icon: <Wind size={32} />,
       title: "Gas Pipeline & Gas Producer Systems",
       desc: "Fabrication and laying of utility piping, gas producer plants, and high-pressure gas distribution networks.",
-      image: "https://images.unsplash.com/photo-1503762687835-12997a9753a3?q=80&w=2070&auto=format&fit=crop"
+      image: "/gas-pipeline.jpg"
     },
     {
       icon: <Factory size={32} />,
       title: "Structural Steel Works",
       desc: "End-to-end structural steel solutions including design, supply, fabrication, and erection for industrial sheds and technological structures.",
-      image: "https://images.unsplash.com/photo-1565439303660-5f9c5d1445d4?q=80&w=2070&auto=format&fit=crop"
+      image: "/steel-fabrication.jpg"
     },
     {
       icon: <CloudOff size={32} />,
       title: "ESP & Pollution Control Systems",
       desc: "Installation of Electrostatic Precipitators (ESP), bag filters, and fume extraction systems to meet environmental compliance.",
-      image: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?q=80&w=2070&auto=format&fit=crop"
+      image: "/ESP.jpg"
     },
     {
       icon: <Database size={32} />, // Using Database as it resembles a tank/cylinder
       title: "Tank & Equipment Fabrication",
       desc: "Manufacturing of storage tanks, silos, hoppers, and pressure vessels for water, fuel, and chemical storage applications.",
-      image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop"
+      image: "/tank.jpg"
     },
     {
       icon: <Wrench size={32} />,
       title: "Industrial Maintenance Services",
       desc: "Routine and shutdown maintenance services, equipment overhauling, and structural repairs to ensure uninterrupted plant operations.",
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2000&auto=format&fit=crop"
+      image: "/Repair.jpg"
     }
   ];
 

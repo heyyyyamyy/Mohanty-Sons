@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Keonjhar, Odisha",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+      image: "/sponge-iron-plant.jpg"
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Barbil, Odisha",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop"
+      image: "/shree-metallics.jpg"
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Raniganj, West Bengal",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop"
+      image: "/Howrah-gas.jpg"
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Durgapur, West Bengal",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
+      image: "/images.jpg"
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Durgapur, West Bengal",
       year: "Completed",
-      image: "sponge.jpg"
+      image: "/sponge.jpg"
     },
     {
       id: 8,
@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Jamuria, West Bengal",
       year: "Completed",
-      image: "bhagabati.jpg"
+      image: "/bhagabati.jpg"
     },
     {
       id: 10,
@@ -93,7 +93,7 @@ const Projects: React.FC = () => {
       category: "cement",
       location: "Bokajan, Assam",
       year: "Completed",
-      image: "klin-shel.jpg"
+      image: "/klin-shel.jpg"
     },
     {
       id: 11,
@@ -111,7 +111,7 @@ const Projects: React.FC = () => {
       category: "power",
       location: "Kamada, Odisha",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?q=80&w=2070&auto=format&fit=crop"
+      image: "/rungta.jpg"
     },
     {
       id: 13,
@@ -120,7 +120,7 @@ const Projects: React.FC = () => {
       category: "industrial",
       location: "Rajgangpur, Odisha",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+      image: "/boil.jpg"
     },
     {
       id: 14,
@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
       category: "cement",
       location: "Rajgangpur, Odisha",
       year: "Ongoing",
-      image: "ocl.jpg"
+      image: "/ocl.jpg"
     },
     {
       id: 15,
@@ -147,7 +147,7 @@ const Projects: React.FC = () => {
       category: "power",
       location: "Rajgangpur, Odisha",
       year: "Ongoing",
-      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop"
+      image: "/ocl-1.jpg"
     },
     {
       id: 17,
@@ -156,7 +156,7 @@ const Projects: React.FC = () => {
       category: "industrial",
       location: "Rajgangpur, Odisha",
       year: "Ongoing",
-      image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop"
+      image: "/oisl.jpg"
     }
   ];
 
