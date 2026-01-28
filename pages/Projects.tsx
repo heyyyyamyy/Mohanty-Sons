@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
       category: "industrial",
       location: "Jharsuguda, Odisha",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1565439303660-5f9c5d1445d4?q=80&w=2070&auto=format&fit=crop"
+      image: "vedanta.jpg"
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Jajpur, Odisha",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1535976868661-86927958f2da?q=80&w=2070&auto=format&fit=crop"
+      image: "/maithan.jpg"
     },
     {
       id: 3,
@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Durgapur, West Bengal",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1503939345306-1632688b56f5?q=80&w=2067&auto=format&fit=crop"
+      image: "sponge.jpg"
     },
     {
       id: 8,
@@ -84,16 +84,16 @@ const Projects: React.FC = () => {
       category: "steel",
       location: "Jamuria, West Bengal",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1581093588402-41141199a041?q=80&w=2070&auto=format&fit=crop"
+      image: "bhagabati.jpg"
     },
     {
       id: 10,
-      title: "UltraTech Cement – Mechanical & Structural Works",
-      client: "UltraTech Cement",
+      title: "Kiln shel and tire replacement- CCI plant",
+      client: "kiln shel",
       category: "cement",
-      location: "Jharsuguda, Odisha",
+      location: "Bokajan, Assam",
       year: "Completed",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop"
+      image: "klin-shel.jpg"
     },
     {
       id: 11,
@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
       category: "cement",
       location: "Rajgangpur, Odisha",
       year: "Ongoing",
-      image: "https://images.unsplash.com/photo-1503762687835-12997a9753a3?q=80&w=2070&auto=format&fit=crop"
+      image: "ocl.jpg"
     },
     {
       id: 15,
