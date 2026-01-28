@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
       category: "industrial",
       location: "Jharsuguda, Odisha",
       year: "Completed",
-      image: "vedanta.jpg"
+      image: "/vedanta.jpg"
     },
     {
       id: 2,

@@ -1,14 +1,12 @@
 import React from 'react';
 import { Facebook, Linkedin, Twitter } from 'lucide-react';
-import AkshayaImage from '../AKSHAYA KUMAR MOHANTY.png';
-import AjayImage from '../AJAY KUMAR MOHANTY.png';
-import managerImage from '../managerImage.jpg';
+
 
 const Team: React.FC = () => {
   const team = [
-    { name: "Akshaya Kumar Mohanty", role: "Director", img: AkshayaImage },
-    { name: "Ajay Kumar Mohanty", role: "Director", img: AjayImage },
-    { name: "Amulya kumar Mohanty", role: "Manager", img: managerImage },
+    { name: "Akshaya Kumar Mohanty", role: "Director", img: "/AKSHAYA KUMAR MOHANTY.png" },
+    { name: "Ajay Kumar Mohanty", role: "Director", img: "/AJAY KUMAR MOHANTY.png" },
+    { name: "Amulya kumar Mohanty", role: "Manager", img: "/managerImage.jpg" },
 
   ];
 
