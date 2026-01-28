@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
-import MSPLLogo from '../MSPL LOGO.png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +62,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group z-20">
             <div className="transform group-hover:rotate-45 transition-transform duration-500">
-               <img src={MSPLLogo} alt="MSPL Logo" className="h-10 w-10 object-contain" />
+               <img src="/MSPL LOGO.png" alt="MSPL Logo" className="h-10 w-10 object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-heading font-bold text-white tracking-wide uppercase leading-none group-hover:text-brand-yellow transition-colors">
