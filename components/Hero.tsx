@@ -33,55 +33,52 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-40 pb-20 overflow-hidden bg-brand-dark">
-      
+
       {/* Dynamic Background Slideshow with Zoom Effect */}
       {slides.map((slide, index) => (
-        <div 
+        <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 delay-1000'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 delay-1000'
+            }`}
         >
           {/* Dark Overlay for readability */}
           <div className="absolute inset-0 bg-[#060B13]/85 z-10"></div>
-          
-          <img 
-            src={slide.image} 
-            alt={`Slide ${index + 1}`} 
-            className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-linear ${
-               index === currentSlide ? 'scale-110' : 'scale-100'
-            }`}
+
+          <img
+            src={slide.image}
+            alt={`Slide ${index + 1}`}
+            className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-linear ${index === currentSlide ? 'scale-110' : 'scale-100'
+              }`}
           />
         </div>
       ))}
-      
+
       {/* Content Container */}
       <div className="container mx-auto px-6 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Content */}
           <div className="max-w-2xl animate-fade-in-up">
-            
+
             {/* Dynamic Subtitle */}
             <div className="h-8 mb-6 overflow-hidden relative">
-               {slides.map((slide, index) => (
-                 <div 
-                   key={index}
-                   className={`absolute top-0 left-0 flex items-center gap-2 transition-all duration-500 transform ${
-                     index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
-                   }`}
-                 >
-                   <ChevronRight className="text-brand-yellow" size={16} strokeWidth={4} />
-                   <span className="text-white font-bold tracking-[0.2em] uppercase text-xs">
-                     {slide.subtitle}
-                   </span>
-                 </div>
-               ))}
+              {slides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`absolute top-0 left-0 flex items-center gap-2 transition-all duration-500 transform ${index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
+                    }`}
+                >
+                  <ChevronRight className="text-brand-yellow" size={16} strokeWidth={4} />
+                  <span className="text-white font-bold tracking-[0.2em] uppercase text-xs">
+                    {slide.subtitle}
+                  </span>
+                </div>
+              ))}
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.1] mb-8">
-              Building Strength <br/>
-              Through Steel <br/>
+              Building Strength <br />
+              Through Steel <br />
               Excellence
             </h1>
 
@@ -91,26 +88,25 @@ const Hero: React.FC = () => {
 
             {/* Dynamic Quote Section */}
             <div className="mb-10 min-h-[60px] relative">
-               {slides.map((slide, index) => (
-                 <p 
-                   key={index}
-                   className={`text-brand-yellow font-heading italic text-xl transition-all duration-700 absolute top-0 left-0 ${
-                     index === currentSlide ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-                   }`}
-                 >
-                   "{slide.quote}"
-                 </p>
-               ))}
+              {slides.map((slide, index) => (
+                <p
+                  key={index}
+                  className={`text-brand-yellow font-heading italic text-xl transition-all duration-700 absolute top-0 left-0 ${index === currentSlide ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                    }`}
+                >
+                  "{slide.quote}"
+                </p>
+              ))}
             </div>
 
             <div className="flex flex-wrap gap-5">
-              <button 
+              <button
                 onClick={() => navigate('/quote')}
                 className="bg-white text-brand-dark px-9 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:bg-brand-yellow transition-all duration-300 shadow-lg hover:-translate-y-1"
               >
                 Get Started
               </button>
-              <button 
+              <button
                 onClick={() => navigate('/contact')}
                 className="bg-transparent border border-gray-600 text-white px-9 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:border-brand-yellow hover:text-brand-yellow transition-all duration-300 hover:-translate-y-1"
               >
@@ -122,33 +118,33 @@ const Hero: React.FC = () => {
           {/* Right Content - Image Block with Stats */}
           <div className="relative hidden lg:block animate-fade-in-up delay-200">
             <div className="relative z-10">
-               {/* Main Image */}
-               <div className="overflow-hidden rounded-sm shadow-2xl relative h-[500px] w-full group border border-white/5">
-                 <img 
-                   src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" 
-                   alt="Industrial Worker" 
-                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent opacity-60"></div>
-               </div>
+              {/* Main Image */}
+              <div className="overflow-hidden rounded-sm shadow-2xl relative h-[500px] w-full group border border-white/5">
+                <img
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop"
+                  alt="Industrial Worker"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent opacity-60"></div>
+              </div>
 
-               {/* Stats Strip Overlay */}
-               <div className="absolute bottom-0 left-0 right-0 bg-[#060B13] border-t border-white/10 p-8 transform translate-y-0 lg:translate-y-0">
-                  <div className="grid grid-cols-3 divide-x divide-white/10">
-                    <div className="text-center px-2">
-                      <span className="block text-3xl font-heading font-bold text-brand-yellow mb-1">25+</span>
-                      <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-medium">Years of Experience</span>
-                    </div>
-                    <div className="text-center px-2">
-                      <span className="block text-3xl font-heading font-bold text-brand-yellow mb-1">98%</span>
-                      <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-medium">On-Time Delivery</span>
-                    </div>
-                    <div className="text-center px-2">
-                      <span className="block text-3xl font-heading font-bold text-brand-yellow mb-1">52K</span>
-                      <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-medium">Completed Projects</span>
-                    </div>
+              {/* Stats Strip Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-[#060B13] border-t border-white/10 p-8 transform translate-y-0 lg:translate-y-0">
+                <div className="grid grid-cols-3 divide-x divide-white/10">
+                  <div className="text-center px-2">
+                    <span className="block text-3xl font-heading font-bold text-brand-yellow mb-1">60+</span>
+                    <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-medium">Years of Experience</span>
                   </div>
-               </div>
+                  <div className="text-center px-2">
+                    <span className="block text-3xl font-heading font-bold text-brand-yellow mb-1">98%</span>
+                    <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-medium">On-Time Delivery</span>
+                  </div>
+                  <div className="text-center px-2">
+                    <span className="block text-3xl font-heading font-bold text-brand-yellow mb-1">52K</span>
+                    <span className="text-[10px] md:text-xs uppercase tracking-widest text-gray-400 font-medium">Completed Projects</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Decorative Background Elements */}
