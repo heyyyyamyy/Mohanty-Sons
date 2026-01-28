@@ -8,7 +8,7 @@ const Team: React.FC = () => {
   const team = [
     { name: "Akshaya Kumar Mohanty", role: "Director", img: AkshayaImage },
     { name: "Ajay Kumar Mohanty", role: "Director", img: AjayImage },
-    { name: "Ajay Kumar Mohanty", role: "Manager", img: managerImage },
+    { name: "Amulya kumar Mohanty", role: "Manager", img: managerImage },
 
   ];
 
