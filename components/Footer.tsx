@@ -45,7 +45,10 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <p className="text-gray-400 text-sm uppercase">Location</p>
-              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">Bhubaneswar, Odisha</p>
+              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">Ground Floor, Plot No. 111/3567, Khata No. 703/2270
+                Kalinga Vihar Square, Kalinga Vihar Road/Street
+                Patrapada, Bhubaneswar
+                Khordha District, Odisha – 751019</p>
             </div>
           </div>
 
