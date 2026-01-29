@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  ChevronRight, Factory, Settings, Flame, Hammer, Truck, Ruler, 
+import {
+  ChevronRight, Factory, Settings, Flame, Hammer, Truck, Ruler,
   Building2, Zap, Anchor, HardHat, Plus, Minus, CheckCircle2, Globe,
   Wrench, Database, Wind, ArrowUpCircle, CloudOff
 } from 'lucide-react';
@@ -82,6 +82,7 @@ const Services: React.FC = () => {
     { icon: <Zap size={32} />, name: "Power Plants", desc: "Boiler erection, ESP systems, piping." },
     { icon: <Anchor size={32} />, name: "Refineries", desc: "Tankage, complex piping networks." },
     { icon: <Wrench size={32} />, name: "Heavy Engineering", desc: "Custom fabrication for specialized machinery." },
+    { icon: <Flame size={32} />, name: "Refractories", desc: "Structural works, blast furnace maintenance." },
   ];
 
   const faqs = [
@@ -97,9 +98,9 @@ const Services: React.FC = () => {
       {/* Page Header */}
       <section className="relative py-24 bg-brand-dark overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" 
-            alt="Services Background" 
+          <img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+            alt="Services Background"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 to-brand-dark"></div>
@@ -123,22 +124,22 @@ const Services: React.FC = () => {
             {allServices.map((service, index) => (
               <div key={index} className="group bg-brand-gray border border-white/5 overflow-hidden hover:border-brand-yellow/50 transition-all duration-300 rounded-sm">
                 <div className="h-48 overflow-hidden relative">
-                   <img 
-                     src={service.image} 
-                     alt={service.title} 
-                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                   />
-                   <div className="absolute inset-0 bg-brand-dark/40 group-hover:bg-brand-dark/20 transition-all"></div>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-brand-dark/40 group-hover:bg-brand-dark/20 transition-all"></div>
                 </div>
                 <div className="p-8 relative">
-                   <div className="absolute -top-10 right-8 bg-brand-yellow text-brand-dark p-4 rounded-sm shadow-lg group-hover:scale-110 transition-transform">
-                     {service.icon}
-                   </div>
-                   <h3 className="text-xl font-heading font-bold text-white mb-4 uppercase pr-8 mt-2">{service.title}</h3>
-                   <p className="text-gray-400 text-sm leading-relaxed mb-6">{service.desc}</p>
-                   <a href="#" className="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm uppercase tracking-wide hover:gap-3 transition-all">
-                     View Details <ChevronRight size={16} />
-                   </a>
+                  <div className="absolute -top-10 right-8 bg-brand-yellow text-brand-dark p-4 rounded-sm shadow-lg group-hover:scale-110 transition-transform">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-heading font-bold text-white mb-4 uppercase pr-8 mt-2">{service.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-6">{service.desc}</p>
+                  <a href="#" className="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm uppercase tracking-wide hover:gap-3 transition-all">
+                    View Details <ChevronRight size={16} />
+                  </a>
                 </div>
               </div>
             ))}
@@ -176,20 +177,20 @@ const Services: React.FC = () => {
             <h2 className="text-4xl font-heading font-bold text-white uppercase mb-4">Our Work Process</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">From project planning to final handover, we ensure safety and quality at every step.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-             {[
-               { step: "01", title: "Planning", desc: "Detailed assessment of drawings and site conditions." },
-               { step: "02", title: "Fabrication", desc: "Precision cutting and welding in our workshops or onsite." },
-               { step: "03", title: "Erection", desc: "Safe lifting and installation of heavy equipment." },
-               { step: "04", title: "Handover", desc: "Final testing, quality checks, and project handover." }
-             ].map((item, i) => (
-               <div key={i} className="relative p-6 border-l border-brand-yellow/30 md:border-l-0 md:border-t hover:bg-white/5 transition-colors">
-                 <span className="text-6xl font-heading font-bold text-white/5 absolute top-4 right-4">{item.step}</span>
-                 <h3 className="text-xl font-heading font-bold text-white mb-2 uppercase">{item.title}</h3>
-                 <p className="text-gray-400 text-sm">{item.desc}</p>
-               </div>
-             ))}
+            {[
+              { step: "01", title: "Planning", desc: "Detailed assessment of drawings and site conditions." },
+              { step: "02", title: "Fabrication", desc: "Precision cutting and welding in our workshops or onsite." },
+              { step: "03", title: "Erection", desc: "Safe lifting and installation of heavy equipment." },
+              { step: "04", title: "Handover", desc: "Final testing, quality checks, and project handover." }
+            ].map((item, i) => (
+              <div key={i} className="relative p-6 border-l border-brand-yellow/30 md:border-l-0 md:border-t hover:bg-white/5 transition-colors">
+                <span className="text-6xl font-heading font-bold text-white/5 absolute top-4 right-4">{item.step}</span>
+                <h3 className="text-xl font-heading font-bold text-white mb-2 uppercase">{item.title}</h3>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -197,40 +198,40 @@ const Services: React.FC = () => {
       {/* FAQ Section */}
       <section className="py-24 bg-brand-gray">
         <div className="container mx-auto px-6">
-           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              <div className="lg:col-span-1">
-                 <div className="flex items-center gap-2 mb-4 text-brand-yellow font-bold tracking-widest uppercase text-sm">
-                    <CheckCircle2 size={16} />
-                    <span>FAQ</span>
-                 </div>
-                 <h2 className="text-4xl font-heading font-bold text-white uppercase mb-6">Common <br/> Questions</h2>
-                 <p className="text-gray-400 mb-8">
-                    Find answers to the most frequently asked questions about our industrial services.
-                 </p>
-                 <button className="bg-transparent border border-white text-white px-8 py-3 rounded-full font-bold uppercase tracking-wide hover:bg-brand-yellow hover:text-brand-dark hover:border-brand-yellow transition-all">
-                   Contact Us
-                 </button>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-1">
+              <div className="flex items-center gap-2 mb-4 text-brand-yellow font-bold tracking-widest uppercase text-sm">
+                <CheckCircle2 size={16} />
+                <span>FAQ</span>
               </div>
-              
-              <div className="lg:col-span-2 space-y-4">
-                 {faqs.map((faq, index) => (
-                   <div key={index} className="bg-brand-dark border border-white/5 rounded-sm overflow-hidden transition-all duration-300 hover:border-brand-yellow/30">
-                      <button 
-                        onClick={() => toggleFaq(index)}
-                        className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
-                      >
-                        <span className={`text-lg font-bold uppercase transition-colors ${openFaq === index ? 'text-brand-yellow' : 'text-white'}`}>
-                          {faq.question}
-                        </span>
-                        {openFaq === index ? <Minus size={20} className="text-brand-yellow" /> : <Plus size={20} className="text-gray-500" />}
-                      </button>
-                      <div className={`px-6 pb-6 text-gray-400 leading-relaxed transition-all duration-300 ${openFaq === index ? 'block' : 'hidden'}`}>
-                        {faq.answer}
-                      </div>
-                   </div>
-                 ))}
-              </div>
-           </div>
+              <h2 className="text-4xl font-heading font-bold text-white uppercase mb-6">Common <br /> Questions</h2>
+              <p className="text-gray-400 mb-8">
+                Find answers to the most frequently asked questions about our industrial services.
+              </p>
+              <button className="bg-transparent border border-white text-white px-8 py-3 rounded-full font-bold uppercase tracking-wide hover:bg-brand-yellow hover:text-brand-dark hover:border-brand-yellow transition-all">
+                Contact Us
+              </button>
+            </div>
+
+            <div className="lg:col-span-2 space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-brand-dark border border-white/5 rounded-sm overflow-hidden transition-all duration-300 hover:border-brand-yellow/30">
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                  >
+                    <span className={`text-lg font-bold uppercase transition-colors ${openFaq === index ? 'text-brand-yellow' : 'text-white'}`}>
+                      {faq.question}
+                    </span>
+                    {openFaq === index ? <Minus size={20} className="text-brand-yellow" /> : <Plus size={20} className="text-gray-500" />}
+                  </button>
+                  <div className={`px-6 pb-6 text-gray-400 leading-relaxed transition-all duration-300 ${openFaq === index ? 'block' : 'hidden'}`}>
+                    {faq.answer}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </div>
