@@ -3,36 +3,37 @@ import { Flame, Building2, Zap, HardHat, Anchor, Wrench, ChevronRight } from 'lu
 
 const Industries: React.FC = () => {
   const industries = [
-    { 
-      icon: <Flame size={40} />, 
-      title: "Steel Plants", 
-      desc: "Comprehensive fabrication for blast furnaces, steel melting shops, and rolling mills." 
+    {
+      icon: <Flame size={40} />,
+      title: "Steel Plants",
+      desc: "Comprehensive fabrication for blast furnaces, steel melting shops, and rolling mills."
     },
-    { 
-      icon: <HardHat size={40} />, 
-      title: "Sponge Iron Plants", 
-      desc: "Erection of rotary kilns, coolers, and material handling systems." 
+    {
+      icon: <HardHat size={40} />,
+      title: "Sponge Iron Plants",
+      desc: "Erection of rotary kilns, coolers, and material handling systems."
     },
-    { 
-      icon: <Building2 size={40} />, 
-      title: "Cement Plants", 
-      desc: "Installation of kilns, pre-heaters, and storage silos." 
+    {
+      icon: <Building2 size={40} />,
+      title: "Cement Plants",
+      desc: "Installation of kilns, pre-heaters, and storage silos."
     },
-    { 
-      icon: <Zap size={40} />, 
-      title: "Power Plants", 
-      desc: "Boiler erection, ESP installation, and high-pressure piping works." 
+    {
+      icon: <Zap size={40} />,
+      title: "Power Plants",
+      desc: "Boiler erection, ESP installation, and high-pressure piping works."
     },
-    { 
-      icon: <Anchor size={40} />, 
-      title: "Refineries", 
-      desc: "Heavy tankage fabrication, pipe racks, and structural maintenance." 
+    {
+      icon: <Anchor size={40} />,
+      title: "Refineries",
+      desc: "Heavy tankage fabrication, pipe racks, and structural maintenance."
     },
-    { 
-      icon: <Wrench size={40} />, 
-      title: "Heavy Engineering", 
-      desc: "Custom heavy fabrication for specialized industrial machinery and structures." 
-    }
+    {
+      icon: <Wrench size={40} />,
+      title: "Heavy Engineering",
+      desc: "Custom heavy fabrication for specialized industrial machinery and structures."
+    },
+    { icon: <Flame size={32} />, title: "Refractories", desc: "Structural works, blast furnace maintenance." },
   ];
 
   return (
@@ -53,8 +54,8 @@ const Industries: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`group bg-brand-gray p-8 border border-white/5 hover:border-brand-yellow transition-all duration-300 hover:-translate-y-1 rounded-sm animate-on-scroll fade-up delay-${(index % 3) * 100}`}
             >
               <div className="mb-6 text-gray-400 group-hover:text-brand-yellow transition-colors">
