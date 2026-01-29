@@ -73,7 +73,7 @@ const Services: React.FC = () => {
       desc: "Routine and shutdown maintenance services, equipment overhauling, and structural repairs to ensure uninterrupted plant operations.",
       image: "/Repair.jpg"
     }
-  ];
+  ]; 
 
   const industries = [
     { icon: <Flame size={32} />, name: "Steel Plants", desc: "Structural works, blast furnace maintenance." },

@@ -30,11 +30,11 @@ const Contact: React.FC = () => {
       {/* Info Grid */}
       <section className="py-20 bg-brand-dark">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {[
               { icon: <Phone size={32} />, title: "Phone Support", info: "(+91) 98765 43210", sub: "Mon-Sat 9am - 6pm" },
               { icon: <Mail size={32} />, title: "Email Us", info: "info.mohanty@example.com", sub: "Online Support 24/7" },
-              { icon: <MapPin size={32} />, title: "Office Address", info: "Plot 42, Industrial Estate", sub: "Bhubaneswar, Orissa, India" },
+              
               { icon: <Clock size={32} />, title: "Working Hours", info: "Mon - Sat: 09:00 - 18:00", sub: "Sunday Closed" }
             ].map((item, i) => (
               <div key={i} className="bg-brand-gray p-8 border border-white/5 hover:border-brand-yellow transition-all duration-300 text-center group">
