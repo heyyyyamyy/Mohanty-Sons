@@ -1,7 +1,99 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, ChevronRight } from 'lucide-react';
 
+interface FormErrors {
+  firstName?: string;
+  lastName?: string;
+  phone?: string;
+  email?: string;
+  message?: string;
+}
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  message: string;
+}
+
 const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    } else if (formData.firstName.trim().length < 2) {
+      newErrors.firstName = 'First name must be at least 2 characters';
+    }
+
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+    } else if (formData.lastName.trim().length < 2) {
+      newErrors.lastName = 'Last name must be at least 2 characters';
+    }
+
+    const phoneRegex = /^[\d\s\-\+\(\)]{10,20}$/;
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone is required';
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    const subject = encodeURIComponent(`[Information Request] ${formData.firstName} ${formData.lastName}`);
+    const body = encodeURIComponent(
+      `Contact Information Request\n` +
+      `========================\n\n` +
+      `Name: ${formData.firstName} ${formData.lastName}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}`
+    );
+
+    window.location.href = `mailto:services@mohantyandsons.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section className="relative py-24 bg-brand-dark overflow-hidden">
       {/* Background Image Half */}
@@ -36,7 +128,11 @@ const ContactForm: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-heading font-bold text-white uppercase">Our Phone</h4>
-                  <p className="text-gray-400 text-lg group-hover:text-brand-yellow transition-colors">(+91) 9178806050</p>
+                  <div className="text-gray-400 text-lg group-hover:text-brand-yellow transition-colors space-y-1">
+                    <p>9178806050</p>
+                    <p>6265566349</p>
+                    <p>9040413865</p>
+                  </div>
                 </div>
               </div>
 
@@ -46,7 +142,7 @@ const ContactForm: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-heading font-bold text-white uppercase">Our Email</h4>
-                  <p className="text-gray-400 text-lg group-hover:text-brand-yellow transition-colors">info.mohanty@example.com</p>
+                  <p className="text-gray-400 text-lg group-hover:text-brand-yellow transition-colors">services@mohantyandsons.com</p>
                 </div>
               </div>
             </div>
@@ -54,35 +150,75 @@ const ContactForm: React.FC = () => {
 
           {/* Right Form */}
           <div className="bg-brand-gray/30 backdrop-blur-sm border border-white/10 p-8 md:p-12 rounded-sm shadow-2xl animate-on-scroll fade-up delay-200">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-white font-bold uppercase text-sm flex gap-1">First Name <span className="text-brand-yellow">*</span></label>
-                  <input type="text" placeholder="Clara" className="w-full bg-transparent border-b border-gray-600 focus:border-brand-yellow py-3 text-white outline-none placeholder-gray-500 transition-colors" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    placeholder="Clara"
+                    className={`w-full bg-transparent border-b py-3 text-white outline-none placeholder-gray-500 transition-colors ${errors.firstName ? 'border-red-500' : 'border-gray-600 focus:border-brand-yellow'}`}
+                  />
+                  {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
                 </div>
                 <div className="space-y-2">
                   <label className="text-white font-bold uppercase text-sm flex gap-1">Last Name <span className="text-brand-yellow">*</span></label>
-                  <input type="text" placeholder="Rose" className="w-full bg-transparent border-b border-gray-600 focus:border-brand-yellow py-3 text-white outline-none placeholder-gray-500 transition-colors" />
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    placeholder="Rose"
+                    className={`w-full bg-transparent border-b py-3 text-white outline-none placeholder-gray-500 transition-colors ${errors.lastName ? 'border-red-500' : 'border-gray-600 focus:border-brand-yellow'}`}
+                  />
+                  {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-white font-bold uppercase text-sm flex gap-1">Phone <span className="text-brand-yellow">*</span></label>
-                  <input type="tel" placeholder="+1 (234) 567 890" className="w-full bg-transparent border-b border-gray-600 focus:border-brand-yellow py-3 text-white outline-none placeholder-gray-500 transition-colors" />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="+91 ..."
+                    className={`w-full bg-transparent border-b py-3 text-white outline-none placeholder-gray-500 transition-colors ${errors.phone ? 'border-red-500' : 'border-gray-600 focus:border-brand-yellow'}`}
+                  />
+                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
                 <div className="space-y-2">
                   <label className="text-white font-bold uppercase text-sm flex gap-1">Email <span className="text-brand-yellow">*</span></label>
-                  <input type="email" placeholder="example@mail.com" className="w-full bg-transparent border-b border-gray-600 focus:border-brand-yellow py-3 text-white outline-none placeholder-gray-500 transition-colors" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="example@mail.com"
+                    className={`w-full bg-transparent border-b py-3 text-white outline-none placeholder-gray-500 transition-colors ${errors.email ? 'border-red-500' : 'border-gray-600 focus:border-brand-yellow'}`}
+                  />
+                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-white font-bold uppercase text-sm flex gap-1">Message <span className="text-brand-yellow">*</span></label>
-                <textarea rows={4} placeholder="Hello there!" className="w-full bg-transparent border-b border-gray-600 focus:border-brand-yellow py-3 text-white outline-none placeholder-gray-500 transition-colors resize-none"></textarea>
+                <textarea
+                  rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Hello there!"
+                  className={`w-full bg-transparent border-b py-3 text-white outline-none placeholder-gray-500 transition-colors resize-none ${errors.message ? 'border-red-500' : 'border-gray-600 focus:border-brand-yellow'}`}
+                ></textarea>
+                {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
               </div>
 
-              <button className="w-full bg-brand-yellow text-brand-dark font-bold uppercase tracking-wide py-4 mt-4 hover:bg-white transition-colors">
+              <button type="submit" className="w-full bg-brand-yellow text-brand-dark font-bold uppercase tracking-wide py-4 mt-4 hover:bg-white transition-colors">
                 Submit Form
               </button>
             </form>

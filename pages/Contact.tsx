@@ -113,9 +113,8 @@ const Contact: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {[
-              { icon: <Phone size={32} />, title: "Phone Support", info: "(+91) 9178806050", sub: "Mon-Sat 9am - 6pm" },
-              { icon: <Mail size={32} />, title: "Email Us", info: "info.mohanty@example.com", sub: "Online Support 24/7" },
-              
+              { icon: <Phone size={32} />, title: "Phone Support", info: "9178806050, 6265566349, 9040413865", sub: "Mon-Sat 9am - 6pm" },
+              { icon: <Mail size={32} />, title: "Email Us", info: "services@mohantyandsons.com", sub: "Online Support 24/7" },
               { icon: <Clock size={32} />, title: "Working Hours", info: "Mon - Sat: 09:00 - 18:00", sub: "Sunday Closed" }
             ].map((item, i) => (
               <div key={i} className="bg-brand-gray p-8 border border-white/5 hover:border-brand-yellow transition-all duration-300 text-center group">
@@ -123,7 +122,7 @@ const Contact: React.FC = () => {
                    {item.icon}
                  </div>
                  <h3 className="text-xl font-heading font-bold text-white mb-2 uppercase">{item.title}</h3>
-                 <p className="text-white font-medium">{item.info}</p>
+                 <p className="text-white font-medium text-sm">{item.info}</p>
                  <p className="text-gray-500 text-sm mt-1">{item.sub}</p>
               </div>
             ))}

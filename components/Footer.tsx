@@ -35,7 +35,11 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <p className="text-gray-400 text-sm uppercase">Call Us</p>
-              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">(+91) 9178806050</p>
+              <div className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors space-y-0.5">
+                <p>9178806050</p>
+                <p>6265566349</p>
+                <p>9040413865</p>
+              </div>
             </div>
           </div>
 
