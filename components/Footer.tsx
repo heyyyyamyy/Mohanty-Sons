@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <p className="text-gray-400 text-sm uppercase">Call Us</p>
-              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">(+91) 98765 43210</p>
+              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">(+91) 9178806050</p>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <p className="text-gray-400 text-sm uppercase">Email Us</p>
-              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">info@mohantyandsons.com</p>
+              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">services@mohantyandsons.com</p>
             </div>
           </div>
         </div>

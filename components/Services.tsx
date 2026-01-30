@@ -11,7 +11,7 @@ const Services: React.FC = () => {
     },
     {
       id: 2,
-      title: "Industrial Steel Processing",
+      title: "Custom Steel Solutions",
       icon: <Settings size={24} />,
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
     },
@@ -39,15 +39,15 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
-              key={service.id} 
+            <div
+              key={service.id}
               className={`group relative h-[500px] overflow-hidden rounded-sm cursor-pointer animate-on-scroll fade-up delay-${index * 100}`}
             >
               {/* Background Image */}
               <div className="absolute inset-0">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
+                <img
+                  src={service.image}
+                  alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-75"></div>
@@ -64,9 +64,9 @@ const Services: React.FC = () => {
                   {service.title}
                 </h3>
                 <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
-                   <p className="text-gray-300 mb-6 text-sm">
-                     High-precision engineering meeting the most rigorous industrial standards with advanced technology and expert craftsmanship.
-                   </p>
+                  <p className="text-gray-300 mb-6 text-sm">
+                    High-precision engineering meeting the most rigorous industrial standards with advanced technology and expert craftsmanship.
+                  </p>
                 </div>
                 <div className="flex items-center gap-2 text-brand-yellow font-bold uppercase text-sm tracking-wider">
                   <span>View Services</span>

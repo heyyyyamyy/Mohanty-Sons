@@ -45,14 +45,14 @@ const AboutSection: React.FC = () => {
           <div className="relative animate-on-scroll fade-right">
             <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-brand-yellow z-10"></div>
             <div className="relative overflow-hidden rounded-sm group">
-              <img 
-                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" 
-                alt="Steel Manufacturing Plant" 
+              <img
+                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop"
+                alt="Steel Manufacturing Plant"
                 className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-brand-yellow/10 group-hover:bg-transparent transition-all duration-500"></div>
             </div>
-            
+
             {/* Floating Stats Card */}
             <div className="absolute -bottom-10 right-0 md:-right-10 bg-brand-yellow text-brand-dark p-8 max-w-xs shadow-2xl hidden md:block animate-on-scroll zoom-in delay-300">
               <div className="flex flex-col gap-1">
@@ -71,10 +71,10 @@ const AboutSection: React.FC = () => {
               <span>About MSPL</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 uppercase leading-tight">
-              Leaders in Heavy <br/> Engineering
+              Leaders in Heavy <br /> Engineering
             </h2>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Mohanty & Sons Pvt. Ltd. (MSPL) is a trusted name in Eastern-Odisha for industrial fabrication and erection. With a rich legacy spanning decades, we have partnered with giants like Tata Projects and Jindal Steel & Power to build critical infrastructure.
+              Mohanty & Sons Pvt. Ltd. (MSPL) is a trusted name in Eastern-Odisha for industrial fabrication and erection. With a rich legacy spanning decades, we have partnered with giants like Dalmia Cement, ACC to build critical infrastructure.
             </p>
 
             <div className="space-y-4 mb-10">
@@ -97,23 +97,23 @@ const AboutSection: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Background Stats Strip */}
       <div className="container mx-auto px-6 mt-24">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
-            {[
-              { value: 60, suffix: "+", label: "Years of Experience" },
-              { value: 20, suffix: "+", label: "Major Clients" },
-              { value: 100, suffix: "+", label: "Completed Projects" },
-              { value: 500, suffix: "+", label: "Skilled Workforce" },
-            ].map((stat, i) => (
-              <div key={i} className={`text-center md:text-left animate-on-scroll fade-up delay-${i * 100}`}>
-                <h4 className="text-4xl font-heading font-bold text-brand-yellow mb-2">
-                  <Counter end={stat.value} suffix={stat.suffix} />
-                </h4>
-                <p className="text-gray-400 uppercase text-sm tracking-wider">{stat.label}</p>
-              </div>
-            ))}
+          {[
+            { value: 60, suffix: "+", label: "Years of Experience" },
+            { value: 20, suffix: "+", label: "Major Clients" },
+            { value: 100, suffix: "+", label: "Completed Projects" },
+            { value: 500, suffix: "+", label: "Skilled Workforce" },
+          ].map((stat, i) => (
+            <div key={i} className={`text-center md:text-left animate-on-scroll fade-up delay-${i * 100}`}>
+              <h4 className="text-4xl font-heading font-bold text-brand-yellow mb-2">
+                <Counter end={stat.value} suffix={stat.suffix} />
+              </h4>
+              <p className="text-gray-400 uppercase text-sm tracking-wider">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -83,7 +83,8 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-gray-400 text-lg mb-8 max-w-lg leading-relaxed border-l-2 border-brand-yellow/30 pl-6">
-              Premier industrial contractor specializing in heavy fabrication, erection, and plant maintenance for Steel, Cement, and Power sectors.
+              Premier industrial contractor specializing in heavy fabrication, erection, and plant maintenance for Steel, Cement, Refractories and Power sectors.
+              With over six decades of expertise, we deliver turnkey solutions that meet the highest industry standards.
             </p>
 
             {/* Dynamic Quote Section */}
