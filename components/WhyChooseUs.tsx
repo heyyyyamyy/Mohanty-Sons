@@ -34,19 +34,19 @@ const WhyChooseUs: React.FC = () => {
           </div>
         </div>
 
-        {/* Center Image */}
+        {/* Center Video */}
         <div className="h-[500px] relative overflow-hidden rounded-sm border border-white/10 group animate-on-scroll zoom-in delay-200">
-          <img
-            src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=1932&auto=format&fit=crop"
-            alt="Industrial Worker"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
-
-          {/* Play Button Simulation */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 cursor-pointer hover:bg-brand-yellow hover:border-brand-yellow transition-all duration-300 hover:scale-110">
-            <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1 hover:border-l-brand-dark"></div>
-          </div>
+          <video
+            src="/assets/strength-behind-industry.mp4"
+            controls
+            playsInline
+            preload="metadata"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            poster="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=1932&auto=format&fit=crop"
+          >
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent pointer-events-none"></div>
         </div>
 
         {/* Right Feature */}
