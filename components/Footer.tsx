@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
             <div>
               <p className="text-gray-400 text-sm uppercase">Call Us</p>
               <div className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors space-y-0.5">
-                <p>9178806050</p>
+                <p>9437343739</p>
                 <p>6265566349</p>
                 <p>9040413865</p>
               </div>
@@ -49,10 +49,9 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <p className="text-gray-400 text-sm uppercase">Location</p>
-              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">Ground Floor, Plot No. 111/3567, Khata No. 703/2270
-                Kalinga Vihar Square, Kalinga Vihar Road/Street
-                Patrapada, Bhubaneswar
-                Khordha District, Odisha – 751019</p>
+              <p className="text-white font-bold text-lg group-hover:text-brand-yellow transition-colors">
+                Kalinga Vihar square, Kalinga Vihar Road/Street Patrapada, Bhubaneswar Khordha District, Odisha - 751019
+              </p>
             </div>
           </div>
 

@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {[
-              { icon: <Phone size={32} />, title: "Phone Support", info: "9178806050, 6265566349, 9040413865", sub: "Mon-Sat 9am - 6pm" },
+              { icon: <Phone size={32} />, title: "Phone Support", info: "9437343739, 6265566349, 9040413865", sub: "Mon-Sat 9am - 6pm" },
               { icon: <Mail size={32} />, title: "Email Us", info: "services@mohantyandsons.com", sub: "Online Support 24/7" },
               { icon: <Clock size={32} />, title: "Working Hours", info: "Mon - Sat: 09:00 - 18:00", sub: "Sunday Closed" }
             ].map((item, i) => (

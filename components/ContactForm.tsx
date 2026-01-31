@@ -129,7 +129,7 @@ const ContactForm: React.FC = () => {
                 <div>
                   <h4 className="text-xl font-heading font-bold text-white uppercase">Our Phone</h4>
                   <div className="text-gray-400 text-lg group-hover:text-brand-yellow transition-colors space-y-1">
-                    <p>9178806050</p>
+                    <p>9437343739</p>
                     <p>6265566349</p>
                     <p>9040413865</p>
                   </div>

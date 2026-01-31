@@ -74,7 +74,7 @@ const AboutSection: React.FC = () => {
               Leaders in Heavy <br /> Engineering
             </h2>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              Mohanty & Sons Pvt. Ltd. (MSPL) is a trusted name in Eastern-Odisha for industrial fabrication and erection. With a rich legacy spanning decades, we have partnered with giants like Dalmia Cement, ACC to build critical infrastructure.
+              Mohanty & Sons Pvt. Ltd. (MSPL) is a trusted name in Eastern-Odisha for industrial fabrication and erection. With a rich legacy spanning decades, we have partnered with giants like Tata projects, Jindal Steel, Dalmia Cemet, ACC, JSW to build critical infrastructure.
             </p>
 
             <div className="space-y-4 mb-10">

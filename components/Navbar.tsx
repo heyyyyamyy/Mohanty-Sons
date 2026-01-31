@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           <div className="flex gap-8 text-xs font-medium text-gray-300">
             <div className="flex items-center gap-2 group cursor-pointer">
               <Phone size={14} className="text-brand-yellow group-hover:rotate-12 transition-transform" />
-              <span className="tracking-wide group-hover:text-brand-yellow transition-colors">(+91) 9178806050</span>
+              <span className="tracking-wide group-hover:text-brand-yellow transition-colors">(+91) 9437343739</span>
             </div>
             <div className="flex items-center gap-2 group cursor-pointer">
               <Mail size={14} className="text-brand-yellow group-hover:scale-110 transition-transform" />
