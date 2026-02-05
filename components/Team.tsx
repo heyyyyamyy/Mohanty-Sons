@@ -4,10 +4,10 @@ import { Facebook, Linkedin, Twitter } from 'lucide-react';
 
 const Team: React.FC = () => {
   const team = [
-    { name: "Akshaya Kumar Mohanty", role: "Director", img: "/director-akshaya-ku-mohanty.jpeg", position: "center 25%" },
+    { name: "Akshaya Kumar Mohanty", role: "Director", img: "/manager-mr-bijay-kumar-mohanty.jpeg", position: "center 25%" },
     { name: "Ajay Kumar Mohanty", role: "Director", img: "/AJAY KUMAR MOHANTY.png", position: "center 5%" },
     { name: "Amulya Kumar Mohanty", role: "Manager", img: "/managerImage.jpg", position: "center 25%" },
-    { name: "Bijay Kumar Mohanty", role: "Manager", img: "/manager-mr-bijay-kumar-mohanty.jpeg", position: "center 25%" },
+    { name: "Bijay Kumar Mohanty", role: "Manager", img: "/director-akshaya-ku-mohanty.jpeg", position: "center 25%" },
   ];
 
   return (
