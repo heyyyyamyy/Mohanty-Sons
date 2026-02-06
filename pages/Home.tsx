@@ -7,7 +7,6 @@ import Industries from '../components/Industries';
 import CTA from '../components/CTA';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Team from '../components/Team';
-import Testimonials from '../components/Testimonials';
 import Blog from '../components/Blog';
 import ContactForm from '../components/ContactForm';
 
@@ -22,7 +21,6 @@ const Home: React.FC = () => {
       <CTA />
       <WhyChooseUs />
       <Team />
-      <Testimonials />
       <Blog />
       <ContactForm />
     </>
